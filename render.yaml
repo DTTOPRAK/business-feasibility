@@ -1,5 +1,3 @@
-# Proje dizininde render.yaml oluştur
-@"
 services:
   - type: web
     name: business-feasibility
@@ -14,11 +12,6 @@ services:
       - key: SECRET_KEY
         sync: false
       - key: DEBUG
-        value: False
+        value: "False"
       - key: BACKEND_CORS_ORIGINS
         value: "*"
-"@ | Out-File -FilePath render.yaml -Encoding utf8 -NoNewline
-
-git add render.yaml
-git commit -m "add render.yaml for Docker deployment"
-git push origin main
